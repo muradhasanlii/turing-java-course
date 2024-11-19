@@ -12,13 +12,15 @@ public class GuessNumber {
         int randomNumber = rand.nextInt(9 * (int) minBound) + (int) minBound;
         int[] randomArray = intDigitsToArray(randomNumber, numberOfDigits);
         boolean condition = true;
+        int numberOfTries = 0;
         while (condition) {
             System.out.print("Enter the guessed number: ");
             int guessNumber = sc.nextInt();
             int[] guessArray = intDigitsToArray(guessNumber, numberOfDigits);
             int[] answers = checkDifference(Arrays.copyOf(randomArray, randomArray.length), Arrays.copyOf(guessArray, guessArray.length));
+            numberOfTries++;
             if (answers[0] == numberOfDigits) {
-                System.out.println("You Win!");
+                System.out.printf("You Win! The number was %d\nNumber of tries: %d", randomNumber, numberOfTries);
                 condition = false;
             }
         }
@@ -58,4 +60,3 @@ public class GuessNumber {
         return array;
     }
 }
-
