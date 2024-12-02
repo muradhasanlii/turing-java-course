@@ -68,7 +68,7 @@ public class WeekPlanner {
         schedule[3][1] = "hit the gym";
         schedule[4][1] = "watch a movie";
         schedule[5][1] = "hit the gym and go to course";
-        schedule[6][1] = "hiy the gym and do coursework";
+        schedule[6][1] = "hit the gym and do coursework";
         return schedule;
     }
 }
