@@ -89,7 +89,7 @@ public class ShipBattleGame {
     // getting value of coordinate if it's out of boundary it will give -2 else, it will give value of coordinate
     public static int getValue(int i, int j, int[][] matrix) {
         if (i < 0 || j < 0 || i > N - 1 || j > N - 1) {
-            return -2;
+            return -1;
         }
         return matrix[i][j];
     }
@@ -147,7 +147,7 @@ public class ShipBattleGame {
     public static void game() {
         int[][] map = new int[N][N]; //creating map
         String[][] allShips = addShips(map); // adding ships to the map
-        //printArray(allShips);
+        printArray(allShips);
         int bombs = 25;
         boolean gameIsOver = false;
         int destroyedShips = 0;
