@@ -3,6 +3,7 @@ package lab1;
 import java.util.Scanner;
 
 public class TestMovie {
+    static Movie[] allMovies = new Movie[0];
     final static Scanner SC = new Scanner(System.in);
 
     public static void main(String[] args) {
@@ -10,7 +11,6 @@ public class TestMovie {
     }
 
     public static void menu() {
-        Movie[] allMovies = new Movie[0];
         boolean appIsOn = true;
         while (appIsOn) {
             showMenu();
